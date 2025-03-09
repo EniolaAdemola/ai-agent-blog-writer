@@ -1,12 +1,13 @@
 # AI Agent Blog Writer
 
-An AI-powered blog writing assistant that generates blog posts based on user input. This project leverages OpenAI's language model and Crew Agent to create content in markdown format.
+An AI-powered blog writing assistant that generates high-quality blog posts based on user input. This project leverages OpenAI's language model and Crew AI agent to create well-structured and informative content in markdown format.
 
 ## Features
 
 - Generates blog posts based on a given topic or prompt
 - Returns the blog post in markdown (`.md`) format for easy publishing
-- Uses Crew Agent and OpenAI to ensure coherent, engaging, and well-structured content
+- Uses AI to ensure coherent, engaging, and well-structured content
+- Powered by Crew AI for intelligent workflow execution
 
 ## Installation
 
@@ -31,11 +32,13 @@ Run the AI agent:
 python crew.py
 ```
 
+Enter your desired topic or prompt, and the AI will generate a well-structured blog post in markdown format.
+
 ## Dependencies
 
 - Python 3.x
 - `openai`
-- `ceww`
+- `crewai`
 
 ## Contributing
 
