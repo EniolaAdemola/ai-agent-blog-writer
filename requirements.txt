@@ -1,0 +1,4 @@
+load-dotenv
+crewai
+crewai_tools
+openai
