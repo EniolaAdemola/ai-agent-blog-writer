@@ -1,21 +1,19 @@
-from crewai import Crew, Process
-from agent.agent import blog_researcher, blog_writer
-from tasks.tasks import research_task, write_task
+from crewai import Crew,Process
+from agent.agents import blog_researcher,blog_writer
+from tasks.tasks import research_task,write_task
 
-# forming the crew with the agents and tasks
+
+# Forming the tech-focused crew with some enhanced configurations
 crew = Crew(
-    agents = [blog_researcher, blog_writer],
-    tasks = [research_task, write_task],
-    process = Process.sequential,
-    memory = True,
-    cache = True,
-    max_rpm = 100, # maximum requests per minute
-    share_crew = True # share the crew with other users
+  agents=[blog_researcher, blog_writer],
+  tasks=[research_task, write_task],
+  process=Process.sequential,  # Optional: Sequential task execution is default
+  memory=True,
+  cache=True,
+  max_rpm=100, # Optional: Maximum requests per minute for all agents
+  share_crew=True # Optional: Share the crew with other users
 )
 
-# run the crew
-result = crew.kickoff(inputs={
-    "topic": "AI VS ML VS DL vs Data Science"
-})
-
+## start the task execution process with enhanced feedback
+result=crew.kickoff(inputs={'topic':'AI VS ML VS DL vs Data Science'})
 print(result)
